@@ -37,6 +37,7 @@ source_code="""<html>
     <button onclick="getID()">GetID</button>
     <p id="mylocid"></p>
     <button onclick="stop()">Stop</button>
+
     <div
       id="map"
       style="width: 100%; height: 480px; float: left; margin-right: 20px"
@@ -236,6 +237,4 @@ source_code="""<html>
   </body>
 </html>
 """
-screen_width = st.screen_width
-screen_height=st.screen_height
-components.html(source_code, height=screen_height, width=screen_width)
+components.html(source_code,height=1000,width=1024)
