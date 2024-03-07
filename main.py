@@ -109,7 +109,7 @@ source_code="""<html>
         container: "map",
         style: "mapbox://styles/mapbox/satellite-streets-v12",
         center: [77.5709, 28.5253307], // starting position in [longitude, latitude] format
-        zoom: 17,
+        zoom: 15,
       });
 
       // an arbitrary start will always be the same
