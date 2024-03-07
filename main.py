@@ -1,5 +1,10 @@
 import streamlit as st
 import streamlit.components.v1 as components
+import pyscreenshot as ImageGrab
+
+# Capture the entire screen
+screenshot = ImageGrab.grab()
+width, height = screenshot.size
 st.header("Cart_EXPO")
 source_code="""<html>
   <head>
@@ -40,7 +45,7 @@ source_code="""<html>
     
     <div
       id="map"
-      style="width: 100%; height: 480px; float: left; margin-right: 20px"
+      style="width: 100%; height: 60%; float: left; margin-right: 20px"
     ></div>
 
     <script>
@@ -238,4 +243,4 @@ source_code="""<html>
   </body>
 </html>
 """
-components.html(source_code,height=1000,width=1024)
+components.html(source_code,height=height*0.8,width=width*0.9)
