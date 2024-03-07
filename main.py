@@ -37,8 +37,7 @@ source_code="""<html>
     <button onclick="getID()">GetID</button>
     <p id="mylocid"></p>
     <button onclick="stop()">Stop</button>
-    <button onclick="jainamLOC()">Jainam LOC</button>
-    <p id="jainamLATLONG"></p>
+    
     <div
       id="map"
       style="width: 100%; height: 480px; float: left; margin-right: 20px"
