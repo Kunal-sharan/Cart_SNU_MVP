@@ -1,9 +1,5 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import tkinter as tk
-
-root = tk.Tk()
-
 st.header("Cart_EXPO")
 source_code="""<html>
   <head>
@@ -240,6 +236,6 @@ source_code="""<html>
   </body>
 </html>
 """
-screen_width = root.winfo_screenwidth()
-screen_height = root.winfo_screenheight()
+screen_width = st.screen_width
+screen_height=st.screen_height
 components.html(source_code, height=screen_height, width=screen_width)
