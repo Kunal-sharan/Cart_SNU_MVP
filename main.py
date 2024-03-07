@@ -1,13 +1,5 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import tkinter as tk
-
-root = tk.Tk()
-screen_width = root.winfo_screenwidth()
-screen_height=root.winfo_screenheight()
-
-print("Screen width:", screen_width)
-
 st.header("Cart_EXPO")
 source_code="""<html>
   <head>
@@ -45,10 +37,9 @@ source_code="""<html>
     <button onclick="getID()">GetID</button>
     <p id="mylocid"></p>
     <button onclick="stop()">Stop</button>
-    
     <div
       id="map"
-      style="width: 100%; height: 60%; float: left; margin-right: 20px"
+      style="width: 100%; height: 480px; float: left; margin-right: 20px"
     ></div>
 
     <script>
@@ -193,8 +184,7 @@ source_code="""<html>
           x.innerHTML = "Geolocation is not supported by this browser.";
         }
       }
-      
-
+     
       function stop() {
         if (watchID !== null) {
           navigator.geolocation.clearWatch(watchID);
@@ -246,4 +236,4 @@ source_code="""<html>
   </body>
 </html>
 """
-components.html(source_code,width=screen_width,height=screen_height)
+components.html(source_code,height=1000,width=1024)
