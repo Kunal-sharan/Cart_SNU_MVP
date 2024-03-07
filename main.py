@@ -175,30 +175,7 @@ source_code="""<html>
       });
         
       // Use the Geolocation API to get the current position
-      function jainamLOC() {
-        let JainamID = null;
-        const fpPromise = import(
-          "https://fpjscdn.net/v3/7z2gqZnHm9vyCMwMDeH9"
-        ).then((FingerprintJS) =>
-          FingerprintJS.load({
-            region: "ap",
-          })
-        );
-
-        // Get the visitorId when you need it.
-        fpPromise
-          .then((fp) => fp.get())
-          .then((result) => {
-            const visitorId = result.visitorId;
-            console.log(visitorId);
-            JainamID = visitorId;
-          });
-        if (navigator.geolocation && JainamID === "EQpncOx2WCeNy9WH6bmo") {
-          navigator.geolocation.getCurrentPosition(showJainamPosition);
-        } else {
-          j.innerHTML = "Geolocation is not supported by this browser.";
-        }
-      }
+     
       function getLocation() {
         if (navigator.geolocation) {
           if (watchID !== null) {
@@ -209,13 +186,7 @@ source_code="""<html>
           x.innerHTML = "Geolocation is not supported by this browser.";
         }
       }
-      function showJainamPosition(position) {
-        j.innerHTML =
-          "Latitude: " +
-          position.coords.latitude +
-          "<br>Longitude: " +
-          position.coords.longitude;
-      }
+      
 
       function stop() {
         if (watchID !== null) {
