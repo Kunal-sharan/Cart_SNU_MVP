@@ -1,10 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import pyscreenshot as ImageGrab
 
-# Capture the entire screen
-screenshot = ImageGrab.grab()
-width, height = screenshot.size
 st.header("Cart_EXPO")
 source_code="""<html>
   <head>
@@ -109,7 +105,7 @@ source_code="""<html>
         container: "map",
         style: "mapbox://styles/mapbox/satellite-streets-v12",
         center: [77.5709, 28.5253307], // starting position in [longitude, latitude] format
-        zoom: 15,
+        zoom: 17,
       });
 
       // an arbitrary start will always be the same
@@ -243,4 +239,4 @@ source_code="""<html>
   </body>
 </html>
 """
-components.html(source_code,height=height*0.8,width=width*0.9)
+components.html(source_code)
